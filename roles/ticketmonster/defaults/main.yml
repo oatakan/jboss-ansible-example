@@ -3,5 +3,5 @@
 deployment_path: /opt/jboss-as/jboss-eap-7.1/standalone/deployments/
 
 app_files:
-  - helloworld.war
+  - jboss-helloworld.war
   - ticket-monster.war
