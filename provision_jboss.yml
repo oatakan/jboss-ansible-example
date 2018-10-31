@@ -1,0 +1,4 @@
+- hosts: all
+  roles:
+    - redhat-cop.jboss-common
+    - redhat-cop.jboss_eap
