@@ -1,0 +1,15 @@
+---
+
+- name: Copy application WAR files to host
+  copy:
+    src: "{{ item }}"
+    dest: /tmp
+  loop: "{{ app_files }}"
+
+- name: Deploy apps to JBoss
+  jboss:
+    deploy_path: "{{ deployment_path }}"
+    src: /tmp/{{ item }}
+    deployment: "{{ item }}"
+    state: present
+  loop: "{{ app_files }}"
