@@ -1,4 +1,4 @@
 - hosts: all
   roles:
-    - redhat-cop.jboss-common
-    - redhat-cop.jboss_eap
+    - middleware_automation.redhat_csp_download.redhat_csp_download
+    - middleware_automation.wildfly.wildfly_install
