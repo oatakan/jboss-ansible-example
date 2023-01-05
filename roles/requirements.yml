@@ -11,7 +11,3 @@
 
 - src: https://github.com/oatakan/ansible-role-vmware
   version: origin/master
-
-- src: redhat-cop.jboss-common
-
-- src: redhat-cop.jboss_eap
