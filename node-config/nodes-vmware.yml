@@ -16,4 +16,4 @@ nodes:
       domain: home.ad
     memory: 8192
     cpu: 2
-    template: "{{ infra_template_name|default('rocky87-x64-v1') }}"
+    template: "{{ infra_template_name|default('rocky91-x64-v1') }}"

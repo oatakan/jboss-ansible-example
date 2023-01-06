@@ -5,7 +5,7 @@ nodes:
     app_name: jboss_demo
     pod_name: "{{ ec2_name_prefix }}"
     instance_type: t2.medium
-    image: "{{ ec2_ami_ids['rhel8'] | default('ami-02eac2c0129f6376b') }}" #updated centos7 image
+    image: "{{ ec2_ami_ids['rhel9'] | default('ami-02eac2c0129f6376b') }}" #updated centos7 image
     volumes:
       - device_name: /dev/sda1
         ebs:
