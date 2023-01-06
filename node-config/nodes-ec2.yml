@@ -1,0 +1,13 @@
+---
+nodes:
+  - name: jboss
+    role: jboss
+    app_name: jboss_demo
+    pod_name: "{{ ec2_name_prefix }}"
+    instance_type: t2.medium
+    image: "{{ ec2_ami_ids['rhel8'] | default('ami-02eac2c0129f6376b') }}" #updated centos7 image
+    volumes:
+      - device_name: /dev/sda1
+        ebs:
+          volume_size: 10
+          delete_on_termination: true

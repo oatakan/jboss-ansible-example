@@ -1,0 +1,19 @@
+---
+providers:
+  vcenter:
+    datacenter: cloud
+    cluster: mylab
+    resource_pool: manageto
+
+nodes:
+  - name: jboss01
+    role: jboss
+    app_name: jboss_demo
+    networks:
+    - name: mgmt
+    domain: home.ad
+    customization:
+      domain: home.ad
+    memory: 8192
+    cpu: 2
+    template: "{{ infra_template_name|default('rocky87-x64-v1') }}"

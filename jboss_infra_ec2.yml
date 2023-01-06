@@ -1,6 +1,0 @@
-- hosts: localhost
-  become: no
-  vars_files:
-    - jboss-nodes-ec2.yml
-  roles:
-    - ansible-role-ec2

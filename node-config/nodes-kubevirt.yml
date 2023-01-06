@@ -1,0 +1,14 @@
+---
+
+nodes:
+  - name: jboss01
+    role: jboss
+    app_name: jboss_demo
+    ports:
+      - port: 8080
+    domain: home.ad
+    memory: 8192
+    cpu: 2
+    user_name: root
+    root_password: '{{ ansible_password | default(ansible_ssh_password) | default("password") }}'
+    template: "{{ infra_template_name | default('rocky91-x64-v1') }}"

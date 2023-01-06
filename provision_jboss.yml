@@ -1,4 +1,6 @@
 - hosts: all
   roles:
-    - middleware_automation.redhat_csp_download.redhat_csp_download
+    - role: middleware_automation.redhat_csp_download.redhat_csp_download
+      become: true
     - middleware_automation.wildfly.wildfly_install
+    - middleware_automation.wildfly.wildfly_systemd

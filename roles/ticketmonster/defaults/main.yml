@@ -1,6 +1,6 @@
 ---
 
-deployment_path: /opt/jboss-as/jboss-eap-7.1/standalone/deployments/
+deployment_path: /opt/wildfly/wildfly-27.0.0.Final/standalone/deployments/
 
 app_files:
   - jboss-helloworld.war

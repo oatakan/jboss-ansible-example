@@ -1,5 +1,22 @@
 ---
 
+- name: find deployment dir
+  find:
+    paths: /opt/wildfly
+    patterns: 'wildfly*'
+    recurse: no
+    file_type: directory
+  register: find_deployment_dir
+
+- name: fail if no match
+  fail:
+    msg: "no wildfly installation found"
+  when: find_deployment_dir.matched == 0
+
+- name: set deployment path
+  set_fact:
+    deployment_path: "{{ find_deployment_dir.files[0].path }}/standalone/deployments/"
+
 - name: Copy application WAR files to host
   copy:
     src: "{{ item }}"
